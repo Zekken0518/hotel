@@ -14,6 +14,7 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
+
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
@@ -52,3 +53,20 @@ ScrollReveal().reveal(".news__card", {
   ...scrollRevealOption,
   interval: 500,
 });
+
+
+function bookRoom() {
+  // Show success modal
+  showModal("Room Booked");
+}
+
+
+function showModal(message) {
+  document.getElementById("modal-message").textContent = message;
+  document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+

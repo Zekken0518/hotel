@@ -16,7 +16,7 @@
       <div class="nav__bar">
         <div class="nav__header">
           <div class="logo nav__logo">
-            <div>J</div>
+            <img src="logo.jpg" alt="J&J Hotel Logo" class="footer__logo-img" />
             <span>J&J<br />HOTEL</span>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
@@ -38,7 +38,7 @@
       <div class="section__container header__container">
         <p class="section__subheader">ABOUT US</p>
         <h1>The Perfect<br />Home for you</h1>
-        <button class="btn">Take A Tour</button>
+        <button class="btn" id="takeTourBtn">Take A Tour</button>
       </div>
     </header>
 
@@ -46,22 +46,42 @@
       <div class="section__container booking__container">
         <form action="/">
           <div class="input__group">
-            <label for="arrival">Arrival Date</label>
-            <input type="text" placeholder="Your Arrival Date" />
+            <label for="arrival">Check in Date</label>
+            <input type="text" placeholder="MM/DD/YYYY" />
           </div>
           <div class="input__group">
-            <label for="departure">Departure Date</label>
-            <input type="text" placeholder="Your Departure Date" />
+            <label for="arrival-time">Check in Time</label>
+            <input type="text" placeholder="ex: 12:00am" />
+          </div>
+          <div class="input__group">
+            <label for="departure">Check out Date</label>
+            <input type="text" placeholder="MM/DD/YYYY" />
+          </div>
+          <div class="input__group">
+            <label for="departure-time">Check out Time</label>
+            <input type="text" placeholder="ex: 4:00pm" />
           </div>
           <div class="input__group">
             <label for="guests">Guests</label>
             <input type="text" placeholder="No Of Guests" />
           </div>
-          <button class="btn">Check Availability</button>
-        </form>
+          <div class="input__group">
+            <label for="room">Room</label>
+            <input type="text" placeholder="Deluxe/Family/Luxury" />
+          </div>
+          <button type="button" onclick="bookRoom()" id="bookBtn">Book</button>
+        <!-- Modal -->
+  <div id="modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p id="modal-message"></p>
+    </div>
+  </div>
       </div>
     </section>
 
+   
+  
     <section class="about" id="about">
       <div class="section__container about__container">
         <div class="about__grid">
@@ -93,7 +113,7 @@
             offer an unparalleled escape from the ordinary, inviting you to
             explore a subterranean world of wonders.
           </p>
-          <button class="btn">Book Now</button>
+          
         </div>
       </div>
     </section>
@@ -147,7 +167,7 @@
             Whether you're looking for a serene retreat in a cozy, intimate setting or an exhilarating adventure beneath the surface, J&J Hotel offers an unforgettable experience. 
             Indulge in unparalleled comfort and discover exciting moments, where relaxation and adventure seamlessly come together, waiting just for you.
           </p>
-          <button class="btn">Book Now</button>
+          
         </div>
         <div class="intro__video">
           <video src="luxury.mp4" autoplay muted loop></video>
@@ -290,17 +310,17 @@
           </li>
           <li>
             <span><i class="ri-user-line"></i></span>
-            <h4>10M</h4>
+            <h4>5M</h4>
             <p>Active Around World</p>
           </li>
           <li>
             <span><i class="ri-function-line"></i></span>
-            <h4>02k</h4>
+            <h4>2k</h4>
             <p>Categories Served</p>
           </li>
           <li>
             <span><i class="ri-lightbulb-flash-line"></i></span>
-            <h4>100M</h4>
+            <h4>10M</h4>
             <p>Ideas Raised Funds</p>
           </li>
         </ul>
@@ -425,6 +445,8 @@
         
       </div>
     </footer>
+
+    
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
