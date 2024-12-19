@@ -70,3 +70,45 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
+function bookRoom() {
+  // Get all input and select elements
+  const inputs = document.querySelectorAll(".input__group input");
+  const select = document.getElementById("room");
+  let allFilled = true;
+
+  // Check if all inputs have values
+  inputs.forEach((input) => {
+    if (input.value.trim() === "") {
+      allFilled = false;
+    }
+  });
+
+  // Check if a room is selected
+  if (select.value === "") {
+    allFilled = false;
+  }
+
+  // Show modal if all inputs are filled, otherwise alert the user
+  if (allFilled) {
+    const modal = document.getElementById("modal");
+    const modalMessage = document.getElementById("modal-message");
+    modalMessage.textContent = "Room booked successfully!";
+    modal.style.display = "flex";
+
+    // Clear all input fields
+    inputs.forEach((input) => {
+      input.value = "";
+    });
+
+    // Reset the dropdown
+    select.value = "";
+  } else {
+    alert("Please fill in all fields before booking.");
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
