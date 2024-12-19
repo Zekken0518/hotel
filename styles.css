@@ -81,6 +81,11 @@
   letter-spacing: 2px;
 }
 
+.logo img {
+  max-width: 100%; /* Ensures the logo doesn't exceed its container */
+  height: auto;    /* Maintains aspect ratio */
+}
+
 .logo div {
   padding-inline: 12px;
   font-size: 2rem;
@@ -796,6 +801,11 @@ nav {
   .footer__col:first-child {
     grid-column: unset;
   }
+
+  .logo img {
+    max-width: 150px; /* Adjust the size for smaller screens */
+    height: auto;
+  }
 }
 
 @media (width > 1024px) {
@@ -856,5 +866,81 @@ nav {
   text-decoration: none;
   cursor: pointer;
 }
+.hotel-members-section {
+  text-align: center;
+  margin: 20px 0;
+}
 
+.hotel-members-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Adjust the color to fit your design */
+}
 
+.hotel-members {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.member {
+  text-align: center;
+}
+
+.member img {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes images circular */
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.member p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#takeTourBtn a {
+  font-weight: bold; /* Makes the button text bold */
+  text-decoration: none; /* Removes underline if present */
+  color: inherit; /* Ensures the text inherits the button's color */
+}
+
+#bookBtn {
+  background-color: #f6ac0f; /* Sets the button color to yellow */
+  color: black; /* Ensures text is readable */
+  border: none; /* Removes border for a cleaner look */
+  padding: 10px 20px; /* Adds padding for better appearance */
+  font-size: 1rem; /* Adjusts the font size */
+  cursor: pointer; /* Changes the cursor to a pointer */
+  border-radius: 5px; /* Adds rounded corners */
+  transition: background-color 0.3s ease; /* Adds a smooth hover effect */
+}
+
+#bookBtn:hover {
+  background-color: gold; /* Slightly darker yellow on hover */
+}
+
+#room {
+  background-color: lightyellow; /* Adds a light yellow background */
+  color: black; /* Ensures the text is readable */
+  border: 2px solid #ccc; /* Adds a subtle border */
+  border-radius: 5px; /* Rounds the corners */
+  padding: 8px; /* Adds padding inside the dropdown */
+  font-size: 1rem; /* Adjusts the font size */
+  cursor: pointer; /* Changes the cursor to a pointer */
+  transition: background-color 0.3s ease; /* Adds a hover transition */
+}
+
+#room:hover {
+  background-color: white; /* Changes to yellow on hover */
+}
+
+#room option {
+  background-color: white; /* Background for options */
+  color: black; /* Text color for options */
+}
